@@ -17,7 +17,7 @@ export default function ContactAvatarList({
 }: IContactAvatarList) {
   return (
     <div
-      className="ml-4 flex flex-col space-y-2 animate-slide-in-from-left"
+      className=" flex flex-col space-y-2 animate-slide-in-from-left"
     >
       {contacts.map((user) => (
         <button

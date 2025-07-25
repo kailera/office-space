@@ -16,7 +16,7 @@ export default function FloatingPanel({
 
   return (
     <div
-      className={`fixed ${basePosition} top-1/2 transform -translate-y-1/2 z-50 flex flex-col items-start space-y-2 ${className}`}
+      className={`fixed ${basePosition} left-2 sm:left-4 z-50 flex flex-col items-start space-y-2 ${className}`}
     >
       {children}
     </div>
