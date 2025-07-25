@@ -1,12 +1,13 @@
 'use client'
 
+import { User } from "@/utils/types";
 import { useState } from "react";
 import ContactAvatarList from "../ui/contact-avatar-list";
 import FloatingChatLauncher from "../ui/floating-chat-laucher";
 import FloatingPanel from "../ui/floating-pannel";
 import MessageBox from "../ui/message-box";
 
-const contacts = [
+const contacts:User[] = [
     {id:'1', name:"Mary", image:"/img/mary.jpg"},
     {id:'2', name:"Boss", image:"/img/boss.jpg"},
     {id:'3', name:"Jhon", image:"/img/jhon.jpg"},

@@ -1,4 +1,3 @@
-// components/FloatingPanel.tsx
 import { ReactNode } from 'react';
 
 interface IFloatingPanel {
