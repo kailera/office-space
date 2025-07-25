@@ -1,30 +1,35 @@
 'use client'
+import { Project } from "@/utils/types";
+import { useState } from "react";
+import ProjectsCarousel from "../ui/projects-carousel";
 
-interface IFloatingPanelProject{
-    projects:Project[]
+interface IFloatingPanelProject {
+  projects: Project[];
 }
-import { Project } from "@/utils/types"
-import { useState } from "react"
-import ProjectsCarousel from "../ui/projects-carousel"
 
-export default function FloatingPanelProject({projects}:IFloatingPanelProject){
-    const [isOpen, setIsOpen] = useState(false)
+export default function FloatingPanelProject({ projects }: IFloatingPanelProject) {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <div className="fixed right-2 sm:right-4 z-50">
+  return (
+    <div className="fixed z-50 right-0 top-32 flex flex-col items-end space-y-2">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`transition-all duration-300 ease-in-out p-2 rounded-l-md shadow-md bg-blue-600 text-white 
+          ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-30 hover:opacity-80 translate-x-full'}
+        `}
+        style={{ transform: isOpen ? 'translateX(0)' : 'translateX(-1.5rem)' }} // faz o botão "colar" na borda
+      >
+        {isOpen ? '❌' : '📁'}
+      </button>
 
-            <button
-            onClick={()=> setIsOpen(!isOpen)}
-            className="bg-blue-600 text-white p-2 rounded-md shadow mb-2 sm:mb-0"> 
-                {isOpen? '❌':'📁'}
-            </button>
-
-            <div className={`transition-all duration-300 ${
-                isOpen?'opacity-100 translate-x-0':'opacity-0 translate-x-full pointer-events-none'
-            } fixed sm:static top-16 sm:top-auto right-0 sm:right-0 w-[90w] sm:w-64 bg-amber-100 shadow-lg rounded-lg p-3 max-h-[80vh] sm:max-h-[60vh] flex flex-col`}>
-                <h2 className="text-lg"> Projetos </h2>
-                <ProjectsCarousel projects={projects}/>
-            </div>
-        </div>
-    )
+      <div
+        className={`transition-all duration-300 ease-in-out transform ${
+          isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'
+        } w-[90vw] sm:w-72 bg-amber-100 shadow-lg rounded-lg p-3 max-h-[80vh] sm:max-h-[60vh] overflow-hidden`}
+      >
+        <h2 className="text-lg font-semibold mb-2">Projetos</h2>
+        <ProjectsCarousel projects={projects} />
+      </div>
+    </div>
+  );
 }

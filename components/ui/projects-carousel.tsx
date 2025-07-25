@@ -14,21 +14,14 @@ export default function ProjectsCarousel({projects}:IProjectsCarousel){
     
     return (
         <div className="flex flex-col gap-2">
-            <div className="flex-justify-between mb-1">
+
                 <button onClick={() => setStartIndex(startIndex - 1)}
                     disabled={!canScrollUp}
                     className="text-sm disabled:opacity-30">
                         ⬆️
                 </button>
 
-                <button
-                    onClick={()=> setStartIndex(startIndex+1)}
-                    disabled={!canScrollDown}
-                    className="text-sm disabled:opacity-30"
-                >
-                    ⬇️
-                </button>
-            </div>
+                
             <div className="flex flex-col gap-2 overflow-hidden">
                 {visibleProjects.map((project)=>(
                      <ProjectCard key={project.id} project={project}/>
@@ -36,6 +29,13 @@ export default function ProjectsCarousel({projects}:IProjectsCarousel){
                 ))}
 
             </div>
+            <button
+                    onClick={()=> setStartIndex(startIndex+1)}
+                    disabled={!canScrollDown}
+                    className="text-sm disabled:opacity-30"
+                >
+                    ⬇️
+                </button>
         </div>    
     )   
 }

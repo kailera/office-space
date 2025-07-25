@@ -10,3 +10,9 @@ export interface Project{
     deadline:string,
     participants:User[]
 }
+
+export interface QuickApp{
+    id:string,
+    name:string,
+    icon:string
+}
