@@ -9,7 +9,6 @@ import MessageBox from "../ui/message-box";
 
 const contacts:User[] = [
     {id:'1', name:"Mary", image:"/img/mary.jpg"},
-    {id:'2', name:"Boss", image:"/img/boss.jpg"},
     {id:'3', name:"Jhon", image:"/img/jhon.jpg"},
     {id:'4', name:"Serena", image:"/img/samanta.jpg"},
     {id:'5', name:"Will", image:"/img/will.jpg"}
