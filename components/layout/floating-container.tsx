@@ -21,7 +21,7 @@ export default function FloatingContainer(){
     return (
         <FloatingPanel position="left">
             
-            <div className="relative mt-2 flex flex-col items-start space-y-2">
+            <div className="relative mt-2 flex flex-col items-start space-y-2 ">
 
             
             <FloatingChatLauncher onClick={()=>{

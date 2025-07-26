@@ -16,7 +16,7 @@ interface IBlogContent {
 export default function BlogContent({ title, articles }: IBlogContent) {
   const displayFractionText = (fraction: string) => fraction.slice(0, 75);
   return (
-    <div className="w-3/4  flex flex-col justify-center md:justify-start pl-2 md:pl-[40px]">
+    <div className="w-3/4  flex flex-col justify-center md:justify-start pl-2 md:pl-[20]">
         <h1 className="m-2">{title}</h1>
       {articles.map((article, i) => (
         <div key={i}>
