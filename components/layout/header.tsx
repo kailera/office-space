@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="w-full border-b bg-white dark:bg-zinc-900 py-2 px-4 flex flex-col gap-2">
       <main className="flex w-full justify-between items-center">
-        <span className="text-xl font-bold text-shadow-amber-100">Axero</span>
+        <span className="text-xl font-bold text-shadow-amber-100">Andaime</span>
 
         <input
           type="text"

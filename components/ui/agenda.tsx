@@ -13,8 +13,8 @@ export default function CalendarAgenda() {
     <div className="text-sm">
       <h2 className="text-lg font-semibold mb-2">August 2025</h2>
       <div className="grid grid-cols-7 gap-2 text-center">
-        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day) => (
-          <div key={day} className="font-semibold text-gray-500 dark:text-gray-400">
+        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, index) => (
+          <div key={`${day}-${index}`} className="font-semibold text-gray-500 dark:text-gray-400">
             {day}
           </div>
         ))}

@@ -14,7 +14,7 @@ export default function FloatingQuickAccessPanel({
     <div className="fixed z-50 right-0 top-1/2 flex flex-col items-end space-y-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`transition-all duration-300 ease-in-out p-2 rounded-l-md shadow-md bg-green-600 text-white
+        className={`transition-all duration-300 ease-in-out px-4 py-3 rounded-l-md shadow-md bg-(--background-items) text-white
                 ${
                   isOpen
                     ? "opacity-100 translate-x-0"
@@ -41,7 +41,7 @@ export default function FloatingQuickAccessPanel({
               className="flex flex-col items-center justify-center bg-gray-100 rounded hover:bg-blue-100 transition"
             >
               <span className="text-2xl">{app.icon}</span>
-              <span className="text-xs text-center mt-1">{app.name}</span>
+              <span className="text-xs text-center mt-1 dark:text-gray-700">{app.name}</span>
             </button>
           ))}
         </div>

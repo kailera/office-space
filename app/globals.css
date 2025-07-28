@@ -7,6 +7,7 @@
   --font-text:'Open Sans', sans-serif;
   --background: #ffeace;
   --foreground: #171717;
+  --background-items:#2b2929;
 }
 
 @theme inline {
@@ -43,6 +44,7 @@
   :root {
     --background: #17101b;
     --foreground: #ededed;
+     --background-items:#a39be2;
   }
 }
 

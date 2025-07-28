@@ -7,9 +7,9 @@ interface IProjectCard{
 
 export default function ProjectCard({project}:IProjectCard){
     return(
-        <div className="border rounded-lg p-2 shadow-sm bg-amber-100">
+        <div className="border rounded-lg p-2 shadow-sm dark:bg-zinc-600">
             <h3 className="text-md font-semibold">{project.title}</h3>
-            <p className="text-sm text-gray-500">Deadline:{project.deadline}</p>
+            <p className="text-sm dark:text-amber-100">Deadline:{project.deadline}</p>
             <div className="flex mt-2 space-x-2">
                 {project.participants.map((user, idx)=>(
                     <Image

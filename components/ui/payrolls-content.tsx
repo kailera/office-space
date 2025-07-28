@@ -15,7 +15,7 @@ interface IPayrollList{
 export default function PayrollList({payrolls}:IPayrollList) {
   return (
     <div className="mt-6 bg-white dark:bg-zinc-800 rounded-xl shadow p-4">
-      <h2 className="text-lg font-semibold mb-3">Últimos Holerites</h2>
+      <h2 className="text-lg font-semibold mb-3">Latests Payrolls</h2>
       <ul className="space-y-3">
         {payrolls.map((p) => (
           <li

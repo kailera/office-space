@@ -17,7 +17,7 @@ export default function MessageBox({ user, onClose }: IMessageBox) {
         placeholder="Type a message..."
       />
       <button className="mt-2 bg-orange-200 text-gray-900 py-1 px-3 rounded hover:bg-gray-600">
-        Enviar
+        Send
       </button>
     </div>
   );
